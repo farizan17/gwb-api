@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "singularName": "shop",
+    "pluralName": "shops",
+    "displayName": "Shop"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "item_type": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "biginteger",
+      "required": true
+    },
+    "item_image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "points": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::point.point",
+      "mappedBy": "shop"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "points",
+  "info": {
+    "singularName": "point",
+    "pluralName": "points",
+    "displayName": "Point",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reedem_date": {
+      "type": "date"
+    },
+    "user_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "points"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "shop": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::shop.shop",
+      "inversedBy": "points"
+    }
+  }
+}
