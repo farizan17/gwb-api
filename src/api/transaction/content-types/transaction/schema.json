@@ -32,6 +32,11 @@
     },
     "transaction_date": {
       "type": "date"
+    },
+    "is_confirmed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }

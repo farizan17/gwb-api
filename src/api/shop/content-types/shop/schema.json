@@ -4,7 +4,8 @@
   "info": {
     "singularName": "shop",
     "pluralName": "shops",
-    "displayName": "Shop"
+    "displayName": "Shop",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,19 +20,15 @@
       "type": "biginteger",
       "required": true
     },
-    "item_image": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
-    },
     "points": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::point.point",
       "mappedBy": "shop"
+    },
+    "item_image": {
+      "type": "string",
+      "required": false
     }
   }
 }
